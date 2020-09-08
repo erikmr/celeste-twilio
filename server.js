@@ -16,7 +16,7 @@
 const express = require("express");
 const request = require("request");
 const app = express();
-const dialogflowSessionClient = require("/botlib/dialogflow_session_client.js");
+const dialogflowSessionClient = require("./botlib/dialogflow_session_client.js");
 const bodyParser = require("body-parser");
 
 app.use(bodyParser.json());
@@ -46,6 +46,7 @@ const listener = app.listen(process.env.PORT, function () {
 
 app.post("/", async function (req, res) {
   const body = req.body;
+  console.log(body);
   const text = body.Body;
   const id = body.From;
   const dialogflowResponse = (await sessionClient.detectIntent(text, id, body))
