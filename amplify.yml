@@ -3,6 +3,7 @@ frontend:
   phases:
     preBuild:
       commands:
+        - npm run build:$BUILD_ENV
         - npm ci
     # IMPORTANT - Please verify your build commands
     build:
