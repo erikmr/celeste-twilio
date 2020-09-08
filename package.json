@@ -18,5 +18,8 @@
   "repository": {
     "url": "insert URL here"
   },
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "node-env-run": "^4.0.1"
+  }
 }
